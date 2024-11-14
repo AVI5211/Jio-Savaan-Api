@@ -124,20 +124,6 @@ http://127.0.0.1:5000/lyrics/?query=<insert-jiosaavn-song-link-or-song-id>&lyric
 
 ---
 
-#### You can fork the repo and deploy on VPS or deploy it on Heroku :)  
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/cyberboysumanjay/JioSaavnAPI/tree/master)
-
-**Note:** Heroku gives US/Europe servers which won't be able to fetch all songs flawlessly. Use any Indian VPS for accurate results.
-
----
-
-## **Made using this API** :heart:
-#### [Musify](https://github.com/Harsh-23/Musify/releases) - Android App
-#### [@songdl_bot](https://telegram.dog/songdl_bot) - Song Downloader Bot on Telegram
-#### [Jio-Saavn-Downloader [Beta]](https://jiosaavn.netlify.app/) - [Open Sourced](https://github.com/ParveenBhadooOfficial/Jio-Saavn-Downloader) website made by [Praveen Bhadoo](https://github.com/ParveenBhadooOfficial)
-#### [Musicder](https://musicder.tk/) - [Open Sourced](https://github.com/cachecleanerjeet/Musicder) website made by [Tuhin Pal](https://github.com/cachecleanerjeet)
-#### [Music_Downloader_CLI](https://github.com/thehamkercat/Music_Downloader_CLI) made by [TheHamkerCat](https://github.com/thehamkercat)
 #### Star the Repo in case you liked it :)
 
 ### ©RoxStar
