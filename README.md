@@ -140,4 +140,4 @@ http://127.0.0.1:5000/lyrics/?query=<insert-jiosaavn-song-link-or-song-id>&lyric
 #### [Music_Downloader_CLI](https://github.com/thehamkercat/Music_Downloader_CLI) made by [TheHamkerCat](https://github.com/thehamkercat)
 #### Star the Repo in case you liked it :)
 
-### © [Sumanjay](https://cyberboysumanjay.github.io)
+### ©RoxStar
