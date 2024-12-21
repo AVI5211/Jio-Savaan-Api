@@ -66,7 +66,7 @@
 
 Clone this repository using
 ```sh
-$ git clone (https://github.com/AVI5211/Jio-Savaan-Api/)
+$ git clone https://github.com/AVI5211/Jio-Savaan-Api
 ```
 Enter the directory and install all the requirements using
 ```sh
