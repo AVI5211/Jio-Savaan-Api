@@ -1,7 +1,8 @@
-from flask import Flask, request, redirect, jsonify, json
+from flask import Flask, request, redirect, jsonify, json, Response
 import time
 import jiosaavn
 import os
+import markdown
 from traceback import print_exc
 from flask_cors import CORS
 
@@ -12,8 +13,85 @@ CORS(app)
 
 @app.route('/')
 def home():
-    return redirect("https://cyberboysumanjay.github.io/JioSaavnAPI/")
+    # Read and convert the README.md file
+    with open("README.md", "r", encoding="utf-8") as file:
+        content = file.read()
+        html_content = markdown.markdown(content, extensions=['extra', 'codehilite', 'toc'])
 
+    # Wrap the content in enhanced HTML
+    styled_html = f"""
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>RoxAvi</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {{
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0 auto;
+                padding: 20px;
+                max-width: 900px;
+                color: #333;
+                background-color: #f4f4f4;
+            }}
+            h1, h2, h3 {{
+                color: #2c3e50;
+            }}
+            pre, code {{
+                background: #f4f4f4;
+                border: 1px solid #ddd;
+                padding: 10px;
+                overflow-x: auto;
+                border-radius: 5px;
+                font-family: monospace;
+            }}
+            a {{
+                color: #3498db;
+                text-decoration: none;
+            }}
+            a:hover {{
+                text-decoration: underline;
+            }}
+            ul {{
+                list-style-type: disc;
+                margin-left: 20px;
+            }}
+            ol {{
+                list-style-type: decimal;
+                margin-left: 20px;
+            }}
+            table {{
+                border-collapse: collapse;
+                width: 100%;
+                margin-bottom: 20px;
+            }}
+            th, td {{
+                border: 1px solid #ddd;
+                padding: 8px;
+            }}
+            th {{
+                background-color: #f2f2f2;
+                text-align: left;
+            }}
+            blockquote {{
+                border-left: 4px solid #3498db;
+                margin: 10px 0;
+                padding: 10px 20px;
+                background: #f9f9f9;
+                color: #666;
+                font-style: italic;
+            }}
+        </style>
+    </head>
+    <body>
+        <h1>Welcome to RoxAvi!</h1>
+        {html_content}
+    </body>
+    </html>
+    """
+    return Response(styled_html, mimetype='text/html')
 
 @app.route('/song/')
 def search():
